@@ -1,0 +1,181 @@
+<div class="px-4 py-10 animate-fadeInUp">
+
+  <h2 class="text-3xl text-center text-primary font-semibold mb-2">
+    Program Flow
+  </h2>
+
+  <div class="w-20 h-1 bg-gold mx-auto mb-8 rounded"></div>
+
+  <div class="max-w-xl mx-auto space-y-4">
+
+    <!-- 1 -->
+    <div class="bg-white/80 rounded-xl shadow p-4 cursor-pointer" (click)="toggle(0)">
+
+      <div class="flex justify-between items-center">
+        <div>
+          <p class="font-semibold text-primary">05:30 AM</p>
+          <p>Kalasa Sthapanam</p>
+        </div>
+        <span class="text-gold text-xl">
+          {{ activeIndex === 0 ? '−' : '+' }}
+        </span>
+      </div>
+
+      <div *ngIf="activeIndex === 0" class="mt-3 text-sm leading-relaxed space-y-1">
+        <p class="text-gray-800">
+          Sacred pots (Kalasam) are installed invoking divine presence and purity.
+        </p>
+        <p class="text-gray-600">
+          கலசம் நிறுவி தெய்வீக சக்தியை அழைக்கப்படுகிறது; இது சுத்தமும் மங்களத்தையும் குறிக்கிறது.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- 2 -->
+    <div class="bg-white/80 rounded-xl shadow p-4 cursor-pointer" (click)="toggle(1)">
+
+      <div class="flex justify-between items-center">
+        <div>
+          <p class="font-semibold text-primary">06:00 AM</p>
+          <p>Go Pooja</p>
+        </div>
+        <span class="text-gold text-xl">
+          {{ activeIndex === 1 ? '−' : '+' }}
+        </span>
+      </div>
+
+      <div *ngIf="activeIndex === 1" class="mt-3 text-sm leading-relaxed space-y-1">
+        <p class="text-gray-800">
+          The sacred cow is worshipped as a symbol of prosperity and divine grace.
+        </p>
+        <p class="text-gray-600">
+          கோமாதா வழிபாடு செல்வமும் தெய்வ அருளும் தரும் என நம்பப்படுகிறது.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- 3 -->
+    <div class="bg-white/80 rounded-xl shadow p-4 cursor-pointer" (click)="toggle(2)">
+
+      <div class="flex justify-between items-center">
+        <div>
+          <p class="font-semibold text-primary">07:00 AM</p>
+          <p>Ganapathi Pooja, Sakala Devatha Pooja</p>
+        </div>
+        <span class="text-gold text-xl">
+          {{ activeIndex === 2 ? '−' : '+' }}
+        </span>
+      </div>
+
+      <div *ngIf="activeIndex === 2" class="mt-3 text-sm leading-relaxed space-y-1">
+        <p class="text-gray-800">
+          Prayers are offered to Lord Ganesha and all deities to remove obstacles.
+        </p>
+        <p class="text-gray-600">
+          விநாயகர் மற்றும் தெய்வங்களுக்கு பூஜை செய்து இடையூறுகள் நீங்கி அருள் பெறப்படுகிறது.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- 4 -->
+    <div class="bg-white/80 rounded-xl shadow p-4 cursor-pointer" (click)="toggle(3)">
+
+      <div class="flex justify-between items-center">
+        <div>
+          <p class="font-semibold text-primary">08:30 AM</p>
+          <p>Sakala Devatha Homam, Dampathi Pooja</p>
+        </div>
+        <span class="text-gold text-xl">
+          {{ activeIndex === 3 ? '−' : '+' }}
+        </span>
+      </div>
+
+      <div *ngIf="activeIndex === 3" class="mt-3 text-sm leading-relaxed space-y-1">
+        <p class="text-gray-800">
+          Sacred fire ritual (Homam) is performed and the couple is honored.
+        </p>
+        <p class="text-gray-600">
+          அக்னி மூலம் ஹோமம் செய்து தம்பதிகள் போற்றப்பட்டு ஆயுள், ஆரோக்கியம் வேண்டப்படுகிறது.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- 5 -->
+    <div class="bg-white/80 rounded-xl shadow p-4 cursor-pointer" (click)="toggle(4)">
+
+      <div class="flex justify-between items-center">
+        <div>
+          <p class="font-semibold text-primary">10:15 AM</p>
+          <p>Poornahuthi Theertha Sthanam</p>
+        </div>
+        <span class="text-gold text-xl">
+          {{ activeIndex === 4 ? '−' : '+' }}
+        </span>
+      </div>
+
+      <div *ngIf="activeIndex === 4" class="mt-3 text-sm leading-relaxed space-y-1">
+        <p class="text-gray-800">
+          Final offering marks completion of the ritual and fulfillment of prayers.
+        </p>
+        <p class="text-gray-600">
+          பூர்ணாஹுதி மூலம் யாகம் நிறைவு பெற்று தெய்வ அருள் கிடைத்ததைக் குறிக்கிறது.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- 6 -->
+    <div class="bg-gold/10 rounded-xl shadow p-4 cursor-pointer" (click)="toggle(5)">
+
+      <div class="flex justify-between items-center">
+        <div>
+          <p class="font-semibold text-primary">12:00 – 12:30 PM</p>
+          <p>Mangalya Dharanam</p>
+        </div>
+        <span class="text-gold text-xl">
+          {{ activeIndex === 5 ? '−' : '+' }}
+        </span>
+      </div>
+
+      <div *ngIf="activeIndex === 5" class="mt-3 text-sm leading-relaxed space-y-1">
+        <p class="text-gray-800">
+          The sacred marital bond is reaffirmed celebrating togetherness.
+        </p>
+        <p class="text-gray-600">
+          மங்கள்ய தரணம் மூலம் திருமண பந்தம் மீண்டும் உறுதியாகிறது.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- 7 -->
+    <div class="bg-white/80 rounded-xl shadow p-4 cursor-pointer" (click)="toggle(6)">
+
+      <div class="flex justify-between items-center">
+        <div>
+          <p class="font-semibold text-primary">01:00 PM</p>
+          <p>Lunch</p>
+        </div>
+        <span class="text-gold text-xl">
+          {{ activeIndex === 6 ? '−' : '+' }}
+        </span>
+      </div>
+
+      <div *ngIf="activeIndex === 6" class="mt-3 text-sm leading-relaxed space-y-1">
+        <p class="text-gray-800">
+          Guests are invited to enjoy a traditional meal together.
+        </p>
+        <p class="text-gray-600">
+          விருந்தில் கலந்து கொண்டு அனைவரும் ஒன்றிணைந்து உணவருந்துவோம்.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
