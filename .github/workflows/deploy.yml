@@ -1,9 +1,14 @@
-name: Auto Deploy Angular
+name: Deploy Angular to GitHub Pages
 
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
@@ -16,13 +21,18 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
-      - name: Install Dependencies
+      - name: Install
         run: npm install
 
-      - name: Build App
+      - name: Build
         run: npm run build -- --base-href "/shastipoorthy-invitation/"
 
-      - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/shasti-invite
+      - name: Upload
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/shasti-invite
+
+      - name: Deploy
+        uses: actions/deploy-pages@v4
