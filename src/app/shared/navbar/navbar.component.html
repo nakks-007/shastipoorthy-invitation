@@ -1,9 +1,13 @@
 <nav class="bg-primary text-white px-6 py-4 shadow-md">
+
   <div class="flex justify-between items-center">
+
+    <!-- Logo -->
     <div class="text-xl tracking-wide">
-      Shasti Poorthi
+      <a routerLink="/home">Shasti Poorthi</a>
     </div>
 
+    <!-- Desktop Menu -->
     <div class="hidden md:flex space-x-6">
       <a routerLink="/home" routerLinkActive="font-bold underline">Home</a>
       <a routerLink="/details" routerLinkActive="font-bold underline">Details</a>
@@ -12,5 +16,29 @@
       <a routerLink="/rsvp" routerLinkActive="font-bold underline">RSVP</a>
       <a routerLink="/about" routerLinkActive="font-bold underline">About</a>
     </div>
+
+    <!-- Mobile Button -->
+    <button class="md:hidden" (click)="toggleMenu()">
+      ☰
+    </button>
+
   </div>
+
+  <!-- Mobile Menu -->
+  <div *ngIf="menuOpen" class="md:hidden mt-4 flex flex-wrap justify-center gap-2">
+
+    <a routerLink="/home" (click)="toggleMenu()" class="px-4 py-1 bg-white/10 rounded-full">Home</a>
+
+    <a routerLink="/details" (click)="toggleMenu()" class="px-4 py-1 bg-white/10 rounded-full">Details</a>
+
+    <a routerLink="/location" (click)="toggleMenu()" class="px-4 py-1 bg-white/10 rounded-full">Location</a>
+
+    <a routerLink="/memories" (click)="toggleMenu()" class="px-4 py-1 bg-white/10 rounded-full">Memories</a>
+
+    <a routerLink="/rsvp" (click)="toggleMenu()" class="px-4 py-1 bg-white/10 rounded-full">RSVP</a>
+
+    <a routerLink="/about" (click)="toggleMenu()" class="px-4 py-1 bg-white/10 rounded-full">About</a>
+
+  </div>
+
 </nav>
