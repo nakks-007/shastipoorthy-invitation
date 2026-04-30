@@ -14,6 +14,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,16 +27,17 @@ jobs:
         with:
           node-version: 22
 
-      - name: Install
+      - name: Install dependencies
         run: npm install
 
-      - name: Build
+      - name: Build Angular app
         run: npm run build -- --base-href "/shastipoorthy-invitation/"
 
-      - name: Upload
+      - name: Upload build files
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist/shasti-invite
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
