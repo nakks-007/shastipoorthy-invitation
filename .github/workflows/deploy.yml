@@ -35,7 +35,7 @@ jobs:
       - name: Upload build files
         uses: actions/upload-pages-artifact@v3
         with:
-        path: dist/shasti-invite/browser
+          path: dist/shasti-invite/browser
 
       - name: Deploy to GitHub Pages
         id: deployment
