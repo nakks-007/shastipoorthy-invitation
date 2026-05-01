@@ -1,7 +1,23 @@
-<app-navbar></app-navbar>
-
-<div class="min-h-screen bg-gradient-to-b from-cream via-white to-crea">
-  <router-outlet></router-outlet>
+<!-- Loader -->
+<div *ngIf="isLoading" class="loader-wrapper" [class.fade-out]="!isLoading">
+  <div class="loader-content">
+    <div class="loader-ring"></div>
+    <div class="loader-icon">🪔</div>
+    <p class="loader-text">
+      Preparing a Special Moment...
+    </p>
+  </div>
 </div>
 
-<app-footer></app-footer>
+<!-- Actual App -->
+<div *ngIf="!isLoading">
+
+  <app-navbar></app-navbar>
+
+  <div class="min-h-screen bg-gradient-to-b from-cream via-white to-crea">
+    <router-outlet></router-outlet>
+  </div>
+
+  <app-footer></app-footer>
+
+</div>
