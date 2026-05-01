@@ -14,10 +14,70 @@
 
   <app-navbar></app-navbar>
 
-  <div class="min-h-screen bg-gradient-to-b from-cream via-white to-crea">
+  <!-- ADD bottom padding so content doesn't hide behind sticky bar -->
+  <div class="min-h-screen pb-36 bg-gradient-to-b from-cream via-white to-crea">
     <router-outlet></router-outlet>
   </div>
 
   <app-footer></app-footer>
+
+  <!-- 🔥 Sticky Bottom Action Bar (Mobile First) -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 md:hidden">
+
+    <div class="mx-3 mb-4 bg-white/90 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 animate-slideUp">
+
+      <div class="flex justify-between items-center text-sm">
+
+        <!-- Venue -->
+        <a href="#/location" class="flex-1 text-center py-3 flex flex-col items-center gap-1 
+         rounded-l-2xl
+         transition-all duration-200
+         hover:bg-gray-100 hover:shadow-md hover:-translate-y-0.5
+         active:scale-95 active:bg-red-200">
+          <span class="text-lg">📍</span>
+          <span class="text-xs">Venue</span>
+        </a>
+
+        <div class="w-px h-8 bg-gray-200"></div>
+
+        <!-- Call -->
+        <a href="tel:7358368986" class="flex-1 text-center py-3 flex flex-col items-center gap-1 
+         rounded-l-2xl
+         transition-all duration-200
+         active:bg-blue-100 hover:shadow-md hover:-translate-y-0.5
+         active:scale-95 active:bg-red-200">
+          <span class="text-lg">📞</span>
+          <span class="text-xs">Call</span>
+        </a>
+
+        <div class="w-px h-8 bg-gray-200"></div>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/917358368986" class="flex-1 text-center py-3 flex flex-col items-center gap-1 
+         rounded-l-2xl
+         transition-all duration-200
+         hover:bg-green-100 active:bg-green-200 hover:shadow-md hover:-translate-y-0.5
+         active:scale-95 active:bg-red-200">
+          <span class="text-lg">💬</span>
+          <span class="text-xs">WhatsApp</span>
+        </a>
+
+        <div class="w-px h-8 bg-gray-200"></div>
+
+        <!-- Download -->
+        <a href="assets/invitation.png" download class="flex-1 text-center py-3 flex flex-col items-center gap-1 
+         rounded-l-2xl
+         transition-all duration-200
+         hover:bg-purple-100 active:bg-purple-200 hover:shadow-md hover:-translate-y-0.5
+         active:scale-95 active:bg-red-200">
+          <span class="text-lg">📄</span>
+          <span class="text-xs">Download</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </div>

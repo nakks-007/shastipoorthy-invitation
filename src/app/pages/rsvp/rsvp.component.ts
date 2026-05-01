@@ -9,16 +9,24 @@ import { Component } from '@angular/core';
 })
 export class RsvpComponent {
 
-  confirm() {
-    const phoneNumber = '917358368986'; // add country code (91 for India)
+  confirm(type: string) {
+    let number = '';
 
-    const message = encodeURIComponent(
-      "Vanakkam 🙏, I will be attending the Shasti Poorthi function of your parents on 18th May."
-    );
+    if (type === 'naga') {
+      number = '917358368986';
+    } else {
+      number = '919940585791';
+    }
 
-    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+    const text = `Vanakkam
 
-    window.open(url, '_blank');
+I will be attending the Shasti Poorthi function.
+
+Regards`;
+
+    const message = encodeURIComponent(text);
+
+    window.open(`https://wa.me/${number}?text=${message}`, '_blank');
   }
 
 }
