@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "version:generate": "node scripts/version.js",
+    "build": "npm run version:generate && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:gh": "ng build --base-href=/shastipoorthy-invitation/"
