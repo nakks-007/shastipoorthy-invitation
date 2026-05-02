@@ -156,8 +156,6 @@ text
 
 <div align="center">
 
-[![Star History](https://api.star-history.com/#nakks-007/shastipoorthy-invitation&Date)](https://github.com/nakks-007/shastipoorthy-invitation)
-
 **⭐ If you like this project**  
 Give it a **star ⭐** and **share the love!**
 
