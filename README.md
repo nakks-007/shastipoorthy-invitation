@@ -1,27 +1,121 @@
-# ShastiInvite
+<div align="center">
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.10.
+# 🪔 Shastiabdha Poorthi Invitation Web App
 
-## Development server
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🪔-blueviolet?style=for-the-badge&logo=github&logoColor=white)](https://nakks-007.github.io/shastipoorthy-invitation/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+> **A beautifully crafted digital invitation experience built with Angular, designed to celebrate a traditional milestone event with a modern, interactive touch.**
 
-## Code scaffolding
+</div>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## ✨ **Overview**
 
-## Build
+This project is a premium digital invitation website created for:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+🎉 **Shastiabdha Poorthi (60th Birthday Ceremony)**  
+💛 **Swarna Mangalya Dharanam**
 
-## Running unit tests
+It combines **cultural elegance + modern UI/UX**, delivering an immersive experience for guests.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<div align="center">
 
-## Running end-to-end tests
+![Demo Preview](https://via.placeholder.com/800x400/FF6B6B/FFFFFF?text=Shastiabdha+Poorthi+Invitation) <!-- Replace with actual screenshot -->
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+</div>
 
-## Further help
+## 🚀 **Features**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### 🎨 **UI / UX**
+- ✅ Responsive mobile-first design
+- ✅ Elegant glassmorphism + gradient theme
+- ✅ Smooth animations & transitions
+- ✅ Floating avatars & premium layout
+
+### 📅 **Event Experience**
+- 🗓️ Event details & program view
+- 📍 Location navigation
+- ⏳ Days-to-go countdown
+- 🖼️ Memories gallery with loader
+
+### 📲 **Smart Actions**
+- 📞 One-tap call
+- 💬 WhatsApp integration
+- 📄 Download invitation (PNG)
+
+### ⚡ **Performance**
+- ⚙️ Optimized asset loading
+- ⚡ Lazy rendering of images
+- ✨ Loader experience for better UX
+
+## 🛠️ **Tech Stack**
+
+| Frontend | Styling | Language | Hosting | CI/CD |
+|----------|---------|----------|---------|-------|
+| ![Angular](https://img.shields.io/badge/Angular-Standalone-blue?style=flat&logo=angular&logoColor=white) | ![Tailwind](https://img.shields.io/badge/Tailwind%20CSS-38B2AC?style=flat&logo=tailwindcss&logoColor=white) | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) | ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-181717?style=flat&logo=github-pages&logoColor=white) | ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat&logo=github-actions&logoColor=white) |
+
+## 🔁 **CI/CD (Auto Deployment)**
+
+This project uses **GitHub Actions** for automated deployment.
+
+### 🔄 **Workflow**
+**Every push to main branch:**
+1. 🏗️ Builds Angular app
+2. 📦 Generates version metadata
+3. 🚀 Deploys to GitHub Pages
+
+**👉 Ensures:**
+- ✅ Zero manual deployment
+- ✅ Always up-to-date live site
+
+## 🏷️ **Versioning System (Git Tags)**
+
+This project follows a **Git Tag based versioning strategy**.
+
+```bash
+🔖 Example
+git tag -a v1.0.1 -m "UI improvements & version tracking"
+git push origin v1.0.1
+```
+
+### ⚙️ **Build Integration**
+During build:
+- **APP_VERSION** - `v1.0.1`
+- **APP_COMMIT** - `abc123`
+- **BUILD_DATE** - `...`
+
+Injected into Angular app (`version.ts`) & displayed in UI (Footer)
+
+## 📦 **Version Script**
+
+**Custom script:**
+```bash
+npm run version:generate
+```
+
+**This script:**
+- 📖 Reads latest Git tag
+- 🔍 Reads commit hash
+- ✨ Generates:
+```typescript
+export const APP_VERSION = 'v1.0.1';
+export const APP_COMMIT = 'abc123';
+export const BUILD_DATE = '...';
+```
+
+## 🧪 **Local Development**
+
+```bash
+🔧 Install dependencies
+npm install
+
+▶️ Run locally
+ng serve
+# Open: http://localhost:4200/
+```
+
+```bash
+🏗️ Build
+npm run build -- --base-href "/shastipoorthy-invitation/"
+```
+
+## 📁 **Project Structure**
