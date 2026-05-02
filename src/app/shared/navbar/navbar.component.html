@@ -12,7 +12,7 @@
             text-xs font-semibold 
             shadow-md">
       <span *ngIf="daysLeft > 0" class="inline-block font-semibold tracking-wide animate-tilt-soft">
-        ⏳ {{ daysLeft }} Days
+        <a routerLink="/home">⏳ {{ daysLeft }} Days</a>
       </span>
 
       <span *ngIf="daysLeft === 0">🎉 Today</span>

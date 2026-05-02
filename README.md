@@ -13,7 +13,7 @@
 This project is a premium digital invitation website created for:
 
 🎉 **Shastiabdha Poorthi (60th Birthday Ceremony)**  
-💛 **Swarna Mangalya Dharanam**
+💛 **Swarna Maangalya Dhaaranam**
 
 It combines **cultural elegance + modern UI/UX**, delivering an immersive experience for guests.
 
@@ -113,3 +113,52 @@ npm run build -- --base-href "/shastipoorthy-invitation/"
 ```
 
 ## 📁 **Project Structure**
+src/
+├── app/
+│ ├── home/
+│ ├── memories/
+│ ├── location/
+│ ├── footer/
+│ └── navbar/
+├── assets/
+├── environments/
+│ └── version.ts ← auto-generated
+scripts/
+└── version.js ← version generator
+
+text
+
+## 🎯 **Key Highlights**
+
+| ✅ Production-level UI polish | ✅ CI/CD automated deployment |
+|------------------------------|------------------------------|
+| ✅ Git tag based version tracking | ✅ Real-world event use-case |
+| ✅ Mobile-first UX | |
+
+## 💡 **Future Enhancements**
+
+- ⏳ Live countdown timer (hours/minutes)
+- 📸 Lazy loading with skeleton UI
+- 🔔 RSVP / attendance tracking
+- 🌐 Multi-language support
+
+## 👤 **Author**
+
+**D. B. Naga Muruga**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/naga-muruga/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nakks-007)
+[![Portfolio](https://img.shields.io/badge/Portfolio-00D4AA?style=for-the-badge&logo=netlify&logoColor=white)](https://naga-muruga-portfolio.netlify.app/)
+
+## 🪔 **Acknowledgement**
+
+> Built with love to celebrate a **once-in-a-lifetime milestone**, blending **tradition with technology**.
+
+<div align="center">
+
+[![Star History](https://api.star-history.com/#nakks-007/shastipoorthy-invitation&Date)](https://github.com/nakks-007/shastipoorthy-invitation)
+
+**⭐ If you like this project**  
+Give it a **star ⭐** and **share the love!**
+
+</div>
