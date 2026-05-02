@@ -17,12 +17,6 @@ This project is a premium digital invitation website created for:
 
 It combines **cultural elegance + modern UI/UX**, delivering an immersive experience for guests.
 
-<div align="center">
-
-![Demo Preview](https://via.placeholder.com/800x400/FF6B6B/FFFFFF?text=Shastiabdha+Poorthi+Invitation) <!-- Replace with actual screenshot -->
-
-</div>
-
 ## 🚀 **Features**
 
 ### 🎨 **UI / UX**
