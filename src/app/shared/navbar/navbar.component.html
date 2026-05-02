@@ -7,6 +7,17 @@
       <a routerLink="/home">Shasti Poorthi</a>
     </div>
 
+    <div class="px-3 py-1 rounded-full 
+            bg-gold text-black 
+            text-xs font-semibold 
+            shadow-md">
+      <span *ngIf="daysLeft > 0" class="inline-block font-semibold tracking-wide animate-tilt-soft">
+        ⏳ {{ daysLeft }} Days
+      </span>
+
+      <span *ngIf="daysLeft === 0">🎉 Today</span>
+    </div>
+
     <!-- Desktop Menu -->
     <div class="hidden md:flex space-x-6">
       <a routerLink="/home" routerLinkActive="font-bold underline">Home</a>

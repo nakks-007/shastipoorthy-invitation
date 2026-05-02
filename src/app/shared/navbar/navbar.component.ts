@@ -12,6 +12,16 @@ import { RouterModule } from '@angular/router';
 export class NavbarComponent {
   menuOpen = false;
 
+  daysLeft: number = 0;
+
+  ngOnInit() {
+    const eventDate = new Date('2026-05-18T12:00:00');
+    const today = new Date();
+
+    const diffTime = eventDate.getTime() - today.getTime();
+    this.daysLeft = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  }
+
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
