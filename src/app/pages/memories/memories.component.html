@@ -1,4 +1,16 @@
-<div class="px-4 py-10 animate-fadeInUp">
+<!-- 🔥 Premium Loader (Same as App Loader) -->
+<div *ngIf="isLoading" class="loader-wrapper" [class.fade-out]="!isLoading">
+  <div class="loader-content">
+    <div class="loader-ring"></div>
+    <div class="loader-icon">🪔</div>
+    <p class="loader-text">
+      Preparing Memories...
+    </p>
+  </div>
+</div>
+
+<!-- ✅ Actual Content -->
+<div *ngIf="!isLoading" class="px-4 py-10 animate-fadeInUp">
 
   <h2 class="text-3xl md:text-4xl text-center text-primary font-semibold tracking-wide mb-2">
     Journey & Memories
@@ -14,8 +26,11 @@
     </h3>
 
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-      <img src="assets/memory1.JPG" class="rounded-xl shadow hover:scale-105 transition duration-300" />
-      <img src="assets/memory2.JPG" class="rounded-xl shadow hover:scale-105 transition duration-300" />
+      <img #imgRef src="assets/memory1.JPG" (load)="onImageLoad()" (error)="onImageLoad()"
+        class="rounded-xl shadow hover:scale-105 transition duration-300" />
+
+      <img #imgRef src="assets/memory2.JPG" (load)="onImageLoad()" (error)="onImageLoad()"
+        class="rounded-xl shadow hover:scale-105 transition duration-300" />
     </div>
 
   </div>
@@ -29,58 +44,56 @@
 
     <div class="space-y-10">
 
+      <!-- Kerala -->
       <div class="text-center">
         <p class="font-semibold text-primary text-lg">Kerala</p>
 
         <div class="grid grid-cols-2 gap-4 mt-3">
 
-          <!-- Left tall image -->
-          <img src="assets/kerala1.JPG"
+          <img #imgRef src="assets/kerala1.JPG" (load)="onImageLoad()" (error)="onImageLoad()"
             class="rounded-xl shadow hover:scale-105 transition duration-300 row-span-2 object-cover h-full w-full" />
 
-          <!-- Top right -->
-          <img src="assets/kerala2.jpg"
+          <img #imgRef src="assets/kerala2.jpg" (load)="onImageLoad()" (error)="onImageLoad()"
             class="rounded-xl shadow hover:scale-105 transition duration-300 object-cover" />
 
-          <!-- Bottom right (new image) -->
-          <img src="assets/kerala3.JPG"
+          <img #imgRef src="assets/kerala3.JPG" (load)="onImageLoad()" (error)="onImageLoad()"
             class="rounded-xl shadow hover:scale-105 transition duration-300 object-cover" />
 
         </div>
       </div>
 
+      <!-- Mayiladuthurai -->
       <div class="text-center">
         <p class="font-semibold text-primary text-lg">Mayiladuthurai & Kumbakonam</p>
 
         <div class="grid grid-cols-2 gap-4 mt-3">
 
-          <!-- Left tall image -->
-          <img src="assets/mylai1.jpg"
+          <img #imgRef src="assets/mylai1.jpg" (load)="onImageLoad()" (error)="onImageLoad()"
             class="rounded-xl shadow hover:scale-105 transition duration-300 row-span-2 object-cover h-full w-full" />
 
-          <!-- Top right -->
-          <img src="assets/mylai2.jpg" class="rounded-xl shadow hover:scale-105 transition duration-300 object-cover" />
+          <img #imgRef src="assets/mylai2.jpg" (load)="onImageLoad()" (error)="onImageLoad()"
+            class="rounded-xl shadow hover:scale-105 transition duration-300 object-cover" />
 
-          <!-- Bottom right (new image) -->
-          <img src="assets/mylai3.jpg" class="rounded-xl shadow hover:scale-105 transition duration-300 object-cover" />
+          <img #imgRef src="assets/mylai3.jpg" (load)="onImageLoad()" (error)="onImageLoad()"
+            class="rounded-xl shadow hover:scale-105 transition duration-300 object-cover" />
 
         </div>
       </div>
 
+      <!-- Thiruchendur -->
       <div class="text-center">
         <p class="font-semibold text-primary text-lg">Thiruchendur</p>
 
         <div class="grid grid-cols-2 gap-4 mt-3">
 
-          <!-- Left tall image -->
-          <img src="assets/thiru1.jpg"
+          <img #imgRef src="assets/thiru1.jpg" (load)="onImageLoad()" (error)="onImageLoad()"
             class="rounded-xl shadow hover:scale-105 transition duration-300 row-span-2 object-cover h-full w-full" />
 
-          <!-- Top right -->
-          <img src="assets/thiru2.jpg" class="rounded-xl shadow hover:scale-105 transition duration-300 object-cover" />
+          <img #imgRef src="assets/thiru2.jpg" (load)="onImageLoad()" (error)="onImageLoad()"
+            class="rounded-xl shadow hover:scale-105 transition duration-300 object-cover" />
 
-          <!-- Bottom right (new image) -->
-          <img src="assets/thiru3.jpg" class="rounded-xl shadow hover:scale-105 transition duration-300 object-cover" />
+          <img #imgRef src="assets/thiru3.jpg" (load)="onImageLoad()" (error)="onImageLoad()"
+            class="rounded-xl shadow hover:scale-105 transition duration-300 object-cover" />
 
         </div>
       </div>
